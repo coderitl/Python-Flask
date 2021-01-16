@@ -1,3 +1,6 @@
+-- 数据文件备份
+-- Linux: mysqldump -uBinTest -p123456 --all-databases >/root/all.sql
+
 /*
 
 具体表象: 用二维表来保存数据

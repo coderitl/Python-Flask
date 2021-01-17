@@ -206,4 +206,21 @@ select distinct(stu_email),stu_id,stu_name from student where stu_email='20211@q
     分组前的筛选 where
 */
 
--- 子查询
+-- 子查询  2021.01.17 13:39:43
+
+-- 降序
+-- 所有记录
+select empno, ename, job, sal from emp order by sal desc;
+-- 前 5 条记录
+select empno, ename, job, sal from emp order by sal desc limit 5;
+
+-- 偏移 5 条查看 5 条: 6-10 条的记录
+select empno, ename, job, sal from emp order by sal desc limit 5 offset 5;
+
+-- 跳过 10 条查 5 条
+select empno, ename, job, sal from emp order by sal desc;
+select empno, ename, job, sal from emp order by sal desc limit 10,5;
+
+-- 大小写问题
+select * from emp where ename = 'king';
+select * from emp where ename = 'KING';

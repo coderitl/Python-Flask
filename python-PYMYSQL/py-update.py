@@ -9,15 +9,13 @@ def main():
                            passwd = 'root',
                            db = 'student',
                            charset = 'utf8')
-    # 输入内容
-    oldeno = int(input('请输入原编号: '))
-    neweno = int(input('请输入新编号: '))
+    oldeno = int(input('请输入编号: '))
 
     try:
         # 获取游标对象
         with conn.cursor() as cursor:
-            # 执行 sql 注意参数位置
-            result = cursor.execute('update tb_emp set eno = %s where eno = %s', (neweno, oldeno))
+            # 执行 sql
+            result = cursor.execute('update  tb_emp set eno =%s where eno=%s', (eno,))
             if result == 1:
                 print('更新数据成功···')
                 conn.commit()

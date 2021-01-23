@@ -11,17 +11,14 @@ def writeContent():
 
 
 def readContent():
-    # 上下文语法 读取文件 同级目录下有一个 content.txt 文件
-    with open('content.txt', 'r',encoding = 'utf8') as stream:
-        # 统计总行数
-        totalLine = len(stream.readlines())
-        # 读取位置
+    with open('content.txt', 'r', encoding = "utf-8") as stream:
+        data = stream.readlines()
+        data1 = len(data)
         startLine = int(input('请输入读取行数起始值: '))
         lnum = startLine
-        # 从 startLine 开始 读取到 totalLine 结束 第一个循环读取的行数
-        for line in stream:
+        for line in data:
             lnum += 1
-            if (lnum >= startLine) and (lnum <= totalLine):
+            if (lnum >= startLine) and (lnum <= data1):
                 print(line)
             else:
                 print('读取结束···')

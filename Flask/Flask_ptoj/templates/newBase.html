@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>  {% block title %} 用户中心 {% endblock %} </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            background-color: pink;
+        }
+
+        #header ul {
+            list-style: none;
+        }
+
+        #header ul li {
+            float: left;
+            padding-left: 50px;
+        }
+
+        #middle {
+            color: #fff;
+            width: 100%;
+            height: 200px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 200px;
+            color: #fff;
+            background-color: skyblue;
+        }
+
+        #footer {
+            color: #fff;
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            background-color: purple;
+            font-size: 30px;
+            text-align: center;
+        }
+
+
+    </style>
+    {% block mycss %}
+
+    {% endblock %}
+</head>
+<body>
+<div id="header">
+    <ul>
+        <a href="javascript:;">
+            <li> 首页</li>
+        </a>
+        <a href="javascript:;">
+            <li> 登录</li>
+        </a>
+        <a href="javascript:;">
+            <li> 注册</li>
+        </a>
+        <a href="javascript:;">
+            <li> 退出</li>
+        </a>
+        <a href="javascript:;">
+            <li> 帮助中心</li>
+        </a>
+    </ul>
+</div>
+<div id="middle">
+    {% block middle %}
+        中间部分
+    {% endblock %}
+</div>
+<div id="footer">
+    版权信息
+</div>
+{% block myjs %}
+
+{% endblock %}
+</body>
+</html>
